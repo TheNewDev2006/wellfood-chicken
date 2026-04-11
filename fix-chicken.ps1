@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+# Quick fix script for wellfood-chicken - creates fixed index.html
+$content = @'
+<!DOCTYPE html>
 <html lang="zxx">
 
 <head>
@@ -412,3 +414,7 @@ posthog.init('phc_yXLZ8yRVWLMrFqWsE65QpfLHq2qgiPnobxgYXXnYoEKk',{api_host:'https
 </body>
 
 </html>
+'@
+
+$content | Out-File -FilePath "index.html" -Encoding UTF8
+Write-Host "Chicken index.html created successfully!"
